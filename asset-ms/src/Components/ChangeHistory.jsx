@@ -8,7 +8,8 @@ const ChangeHistory = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/change_history")
+      // .get("http://localhost:3000/auth/change_history")
+      .get("http://localhost:3000/change_history") //changed code
       .then((response) => setHistory(response.data))
       .catch((error) => console.error("Error fetching change history:", error));
   }, []);

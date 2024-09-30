@@ -19,9 +19,11 @@ app.use(
 app.use(express.json());
 app.use(cookieParser()); 
 
-app.use("/auth", adminRouter);
-app.use("/employee", employeeRouter);
-app.use("/auth", changeHistory);
+// Use different base paths for admin and change history routes
+app.use("/auth", adminRouter); // For admin routes
+app.use("/employee", employeeRouter); // For employee routes
+// app.use("/auth", changeHistory); // For change history routes
+app.use("/change_history", changeHistory); // changed code.
 
 app.use(express.static("Public"));
 
@@ -35,9 +37,10 @@ const verifyUser = (req, res, next) => {
       next();
     });
   } else {
-    return res.json({ Status: false, Error: "Not autheticated" });
+    return res.json({ Status: false, Error: "Not authenticated" });
   }
 };
+
 app.get("/verify", verifyUser, (req, res) => {
   return res.json({ Status: true, role: req.role, id: req.id });
 });
