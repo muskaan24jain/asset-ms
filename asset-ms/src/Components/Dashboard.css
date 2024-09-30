@@ -1,0 +1,85 @@
+/* Dashboard.css */
+
+/* Container styling */
+.container-fluid {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    /* Light background color */
+}
+
+/* Sidebar styling */
+.bg-dark {
+    background-color: #343a40 !important;
+    /* Dark background for sidebar */
+}
+
+.text-white {
+    color: #ffffff !important;
+    /* White text color */
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+    /* Ensure full viewport height */
+}
+
+/* Sidebar link styling */
+.nav-link {
+    border-radius: 0.25rem;
+    padding: 0.75rem 1rem;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #495057;
+    /* Darker gray background on hover */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Sidebar icons styling */
+.bi {
+    font-size: 1.25rem;
+    /* Larger icons */
+}
+
+/* Main content area styling */
+.p-2 {
+    padding: 1rem !important;
+}
+
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for header */
+}
+
+/* Header styling */
+h4 {
+    color: #343a40;
+    /* Darker text color for header */
+    font-weight: 600;
+}
+
+/* Flexbox styling for sidebar layout */
+.row.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.col-auto {
+    flex: 0 0 auto;
+    width: 250px;
+    /* Fixed width for sidebar */
+}
+
+.col {
+    flex: 1;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 767.98px) {
+    .col-auto {
+        width: 100%;
+    }
+}

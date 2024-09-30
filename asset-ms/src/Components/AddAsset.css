@@ -1,0 +1,109 @@
+/* AddAsset.css */
+
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+
+/* Form Title */
+.text-center {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Form Labels */
+.form-label {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+/* Form Inputs */
+.form-control {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Form Select */
+.form-select {
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-select:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-success:focus {
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Map Container */
+.map-container {
+    margin-left: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container .map {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    /* Responsive adjustments for smaller screens */
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-3 {
+        width: 90%;
+    }
+
+    .map-container {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 90%;
+    }
+}

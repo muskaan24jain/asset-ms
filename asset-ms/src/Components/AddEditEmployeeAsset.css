@@ -1,0 +1,34 @@
+.d-flex {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form-container,
+.map-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    max-width: 500px;
+    height: 100%;
+   
+}
+
+.map-container {
+    flex: 2;
+    height: 700px;
+   
+}
+
+.map-container .leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}

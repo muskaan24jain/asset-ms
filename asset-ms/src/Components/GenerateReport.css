@@ -1,0 +1,18 @@
+
+
+.dropdown-custom .dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-custom .form-check {
+    margin-bottom: 0;
+}
+
+.dropdown-custom .form-check-input {
+    margin-right: 10px;
+}
+
+.dropdown-custom .form-check-label {
+    display: inline;
+}

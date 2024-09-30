@@ -1,0 +1,99 @@
+/* EmployeeDashboard.css */
+
+/* General button styling */
+.btn {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-primary {
+    background-color: #138496;
+    border-color: #138496;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #138496;
+    border-color: #138496;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-danger {
+    background-color:#e0a800;
+    border-color:#e0a800;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}
+
+/* Additional styling for buttons within the table */
+.table .btn {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+}
+
+/* Custom button for dropdowns */
+.asset-dropdown .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.asset-dropdown .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Custom button for dropdown content */
+.asset-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    top: 2.5rem;
+    left: 0;
+    z-index: 1000;
+}
+
+.asset-dropdown:hover .asset-dropdown-content {
+    display: block;
+}
+
+.asset-dropdown-content h4 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.asset-checkboxes {
+    max-height: 300px;
+    overflow-y: auto;
+}
