@@ -52,7 +52,7 @@ router.post("/adminlogin", (req, res) => {
         // Generate JWT with admin ID
         const token = jwt.sign(
           { adminId: admin.id, role: "admin", email: admin.email },
-          "jwt_secret_key", 
+          "jwt_secret_key",
           { expiresIn: "1d" }
         );
 
@@ -69,7 +69,6 @@ router.post("/adminlogin", (req, res) => {
     }
   });
 });
-
 
 // Fetch categories
 
@@ -158,8 +157,8 @@ router.post("/add_asset", upload.array("receipts"), (req, res) => {
     return res.status(400).json({ Status: false, Error: "No files uploaded" });
   }
 
-  console.log("Files:", req.files); 
-  console.log("Body:", req.body); 
+  console.log("Files:", req.files);
+  console.log("Body:", req.body);
   const {
     category_id,
     quantity,
@@ -205,7 +204,7 @@ router.post("/add_asset", upload.array("receipts"), (req, res) => {
     address1,
     address2,
     status,
-    receipts.join(", "), 
+    receipts.join(", "),
     installation_date,
   ];
 
@@ -227,7 +226,7 @@ router.post("/add_asset", upload.array("receipts"), (req, res) => {
 router.put("/asset/:id", upload.array("receipts"), (req, res) => {
   const { id } = req.params;
   const { category_id, quantity, price, address, status } = req.body;
-  const receipt = req.file ? req.file.filename : req.body.receipt; 
+  const receipt = req.file ? req.file.filename : req.body.receipt;
 
   const sql =
     "UPDATE asset SET category_id = ?, quantity = ?, price = ?, address = ?, status=?, receipt = ? WHERE id = ?";
@@ -474,7 +473,7 @@ router.get("/generate_report", (req, res) => {
         DownloadUrl: `/download_report?file=${encodeURIComponent(
           filePath
         )}&name=${encodeURIComponent(fileName)}`,
-        ReportData: result, 
+        ReportData: result,
         TotalAssets: totalAssets,
       });
     });
@@ -520,14 +519,13 @@ router.get("/asset_status_counts", (req, res) => {
         .json({ Status: false, Error: "Internal Server Error" });
     }
 
-  
     //console.log("Query Results:", results);
 
     // Check the structure of the results
     if (Array.isArray(results) && results.length > 0) {
       res.json({
         Status: true,
-        Result: results[0], 
+        Result: results[0],
       });
     } else {
       res.json({
